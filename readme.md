@@ -60,7 +60,7 @@ I utilized a local machine with the following specifications:
 1. **Repository Setup:** Clone the project repository:
 
   ```bash
-  git clone https://github.com/kishlayjeet/Twitter-Data-Pipeline-using-Airflow-and-AWS-S3.git
+  git clone https://github.com/kishlayjeet/Zomato-Twitter-Sentiment-Analysis-Data-Pipeline.git
   ```
 
 2. **Python Package Installation:** Install the required Python packages:
