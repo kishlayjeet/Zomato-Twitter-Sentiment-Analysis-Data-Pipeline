@@ -14,8 +14,8 @@ class TwitterETL:
         self.auth_token = config.auth_token
         self.aws_key = config.aws_key
         self.aws_secret = config.aws_secret
-        self.raw_data_bucket_name = "kishlay-zomato-raw-data-bucket"
-        self.processed_data_bucket_name = "kishlay-zomato-processed-data-bucket"
+        self.raw_data_bucket_name = '<your_raw_data_bucket_name>' # eg:- "kishlay-zomato-raw-data-bucket"
+        self.processed_data_bucket_name = '<your_processed_data_bucket_name>' # eg:- "kishlay-zomato-processed-data-bucket"
         self.aws = AwsControl(self.aws_key, self.aws_secret)
 
         try:
