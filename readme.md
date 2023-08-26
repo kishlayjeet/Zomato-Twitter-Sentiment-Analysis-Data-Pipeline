@@ -1,14 +1,16 @@
-# Zomato's Twitter Sentiment Analysis Data Pipeline
+# 🍔 Zomato's Twitter Sentiment Analysis Data Pipeline
 
 This project provides valuable customer sentiment insights for Zomato, a popular food delivery company, by tracking and analyzing tweets related to their brand and services. The data pipeline scrubs Twitter for relevant data, processes and analyzes it, and then stores the results for visualization. This helps Zomato keep a close eye on their customer satisfaction levels and continuously refine their services.
 
-## Overview
+## 💡 Overview
 
 Due to recent restrictions imposed on the Twitter API, we've adopted a scraping strategy using Selenium. The pipeline is scheduled to scrape tweets daily, specifically targeting those mentioning Zomato. These tweets are then processed, analyzed, and stored in AWS Redshift, followed by a sentiment analysis to evaluate customer sentiments. The final output is a dashboard reflecting customer sentiment trends over the preceding seven weeks.
 
+🔮 Sneak Peek at Our Architectural Blueprint! 
+
 ![Architecture](https://imgur.com/A5jBo0p.png)
 
-## Pipeline Architecture
+## 🛠️ Pipeline Architecture
 
 1. **Tweet Scraping:** The journey begins with Selenium, a powerful browser automation tool, which is set to scrape tweets about Zomato.
 
@@ -22,7 +24,7 @@ Due to recent restrictions imposed on the Twitter API, we've adopted a scraping 
 
 6. **Data Visualization:** Finally, we use Power BI, a business analytics tool, to create a dashboard from the processed data. This dashboard provides an overview of customer sentiment trends regarding Zomato's services over a specified period.
 
-## Tools and Environment Setup
+## 🛠️ Tools and Environment Setup
 
 #### Key tools and technologies utilized:
 
@@ -53,12 +55,12 @@ I utilized a local machine with the following specifications:
 - Apache Airflow for orchestrating workflows.
 - Essential Python libraries: Selenium, NLTK, pandas, boto3.
 
-## Getting Started
+## 🚀 Getting Started
 
 1. **Repository Setup:** Clone the project repository:
 
 ```bash
-git clone https://github.com/kishlayjeet/Twitter-Data-Pipeline-2.0.git
+git clone https://github.com/kishlayjeet/Twitter-Data-Pipeline-using-Airflow-and-AWS-S3.git
 ```
 
 2. **Python Package Installation:** Install the required Python packages:
@@ -99,7 +101,7 @@ auth_token = "<your_twitter_auth_token>"
 
 **Note:** _For security practices while using environment variables is suitable for demonstrations, in a production setting, leverage AWS Secrets Manager or IAM roles for increased security._
 
-## Running the Pipeline
+## 🚀 Running the Pipeline
 
 1. **Starting Airflow:** Launch the Airflow server:
 
@@ -134,26 +136,24 @@ CREATE TABLE IF NOT EXISTS zomato_data(
 
 ![Process Complete](https://imgur.com/dGpKjYM.png)
 
-## Visualization
-
-Now you can access processed data and visualize it.
+## 🎨 Visualization
 
 ![Dashboard]()
 
-## Key Points to Remember
+## ✨ Key Points to Remember
 
 - The pipeline is programmed for a Zomato-centric Twitter search. If you wish to collect data on a different subject, you can modify the `construct_query` function in `/twitter-data-pipeline/main.py`.
 - The pipeline won't automatically save data to an S3 bucket. To store data in your chosen S3 buckets, update the `raw_data_bucket_name` and `processed_data_bucket_name` variables in `/twitter-data-pipeline/main.py` with your bucket details.
 - Currently, the pipeline is set to run on daily basis. You can adjust the `schedule_interval` in the DAG definition to suit your needs, whether that means running the pipeline more or less frequently.
 
-## Error Handling and Troubleshooting
+## 🩹 Error Handling and Troubleshooting
 
 - Airflow provides a UI for monitoring the status of tasks and DAG runs. In case of task failure, the UI displays the error message and the traceback, which can be used to troubleshoot the issue.
 - Airflow also provides the option to retry failed tasks a certain number of times before marking them as failures. This can be configured in the DAG definition.
 - In case of issues with the S3 bucket, such as access denied or invalid credentials, check if the `config.py` file contains the correct AWS access key and secret key, and that the S3 bucket name is correctly configured in the `main.py` file.
 - Logs for the pipeline can also be found in the `logs/` directory. These logs can be useful in troubleshooting issues with the pipeline.
 
-## Future Enhancements
+## 🌱 Future Enhancements
 
 There's always room for improvement! Here are a few areas that could be expanded upon in the future:
 
@@ -161,10 +161,10 @@ There's always room for improvement! Here are a few areas that could be expanded
 - Integrate with other social media platforms for more comprehensive customer feedback.
 - Develop a notification system to alert when there are significant changes in sentiment trend.
 
-## Disclaimer
+## 🔐 Disclaimer
 
 This project is intended for educational purposes. Always ensure you comply with Twitter's and Zomato's terms of service, as well as all relevant laws and regulations. Remember to ensure data privacy, security, and compliance in any production implementation.
 
-## Author
+## 💌 Author
 
 This data pipeline is brought to you by [Kishlay](https://github.com/kishlayjeet). If you have questions, suggestions, or feedback, please don't hesitate to reach out at contact.kishlayjeet@gmail.com.

@@ -1,0 +1,5 @@
+apache-airflow==2.6.2
+boto3==1.26.162
+pandas==2.0.2
+nltk==3.8.1
+selenium==4.10.0
