@@ -26,7 +26,7 @@ Due to recent restrictions imposed on the Twitter API, we've adopted a scraping 
 
 ## 🛠️ Tools and Environment Setup
 
-#### Key tools and technologies utilized:
+### Key tools and technologies utilized:
 
 - **Data Scraping:** `Selenium`
 - **Raw Data Storage:** `AWS S3`
@@ -59,26 +59,26 @@ I utilized a local machine with the following specifications:
 
 1. **Repository Setup:** Clone the project repository:
 
-```bash
-git clone https://github.com/kishlayjeet/Twitter-Data-Pipeline-using-Airflow-and-AWS-S3.git
-```
+  ```bash
+  git clone https://github.com/kishlayjeet/Twitter-Data-Pipeline-using-Airflow-and-AWS-S3.git
+  ```
 
 2. **Python Package Installation:** Install the required Python packages:
 
-```bash
-pip install -r requirements.txt
-```
+  ```bash
+  pip install -r requirements.txt
+  ```
 
 3. **Configuration Setup:** Modify the config.py file to input your Twitter and AWS credentials:
 
-```python
-# AWS
-aws_key = "<your_aws_access_key>"
-aws_secret = "<your_aws_access_secret>"
+  ```python
+  # AWS
+  aws_key = "<your_aws_access_key>"
+  aws_secret = "<your_aws_access_secret>"
 
-# Twitter
-auth_token = "<your_twitter_auth_token>"
-```
+  # Twitter
+  auth_token = "<your_twitter_auth_token>"
+  ```
 
 **Note:** _You can locate the `auth_token` in your browser cookies after logging into your Twitter account._
 
@@ -88,8 +88,8 @@ auth_token = "<your_twitter_auth_token>"
 
 5. **IAM Role:** Set up an IAM role for the Lambda function to provide:
 
-- Permissions for S3's GetObject and DeleteObject for your specific bucket.
-- Full Redshift access or specific access based on security needs.
+  - Permissions for S3's GetObject and DeleteObject for your specific bucket.
+  - Full Redshift access or specific access based on security needs.
 
 6. **Lambda Configuration:** Assign the created role to your Lambda function.
 
@@ -105,9 +105,9 @@ auth_token = "<your_twitter_auth_token>"
 
 1. **Starting Airflow:** Launch the Airflow server:
 
-```bash
-airflow standalone
-```
+  ```bash
+  airflow standalone
+  ```
 
 ![Airflow Server](https://imgur.com/T9isKxa.png)
 
