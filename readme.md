@@ -138,7 +138,7 @@ CREATE TABLE IF NOT EXISTS zomato_data(
 
 ## 🎨 Visualization
 
-![Dashboard]()
+![Dashboard](https://imgur.com/fIa3odo.png)
 
 ## ✨ Key Points to Remember
 
